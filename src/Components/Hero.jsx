@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 
-
 export default function Hero() {
   const [currIdx, setCurrIdx] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
@@ -32,7 +31,10 @@ export default function Hero() {
       >
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
-            <div onClick={handleMiniVdClick} className="origin center">
+            <div
+              onClick={handleMiniVdClick}
+              className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
+            >
               <video
                 autoPlay
                 ref={nextVidRef}
@@ -47,7 +49,24 @@ export default function Hero() {
           </div>
         </div>
 
-        <video src={getVidSrc(currIdx)} />
+        <video
+          src={getVidSrc(currIdx)}
+          ref={nextVidRef}
+          id="next-video"
+          loop
+          muted
+          className="object-center object-cover absolute-center absolute z-20 invisible"
+          onLoadedData={handleLoadedVid}
+        />
+
+        <video
+          autoPlay
+          src={getVidSrc(currIdx === totalVid - 1 ? 1 : currIdx)}
+          loop
+          muted
+          className="object-center object-cover absolute left-0 top-0 size-full"
+          onLoadedData={handleLoadedVid}
+        />
       </div>
     </div>
   );
