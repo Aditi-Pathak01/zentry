@@ -1,8 +1,9 @@
+import Hero from "./Components/Hero";
 function App() {
   return (
-    <>
-      <h1>hello</h1>
-    </>
+    <main className="relative min-h-screen w-screen overflow-x-hidden">
+      <Hero />
+    </main>
   );
 }
 
