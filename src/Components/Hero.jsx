@@ -67,6 +67,21 @@ export default function Hero() {
           className="object-center object-cover absolute left-0 top-0 size-full"
           onLoadedData={handleLoadedVid}
         />
+
+        <h1 className="special-font-b hero-heading absolute bottom-5 right-5 text-blue-75 z-20">
+          G<b>a</b>ming
+        </h1>
+        <div className="absolute top-0 left-0 z-20 size-full">
+          <div className="mt-24 px-5 sm:px-10">
+            <h1 className="special-font-b hero-heading text-blue-75">
+              Redefi<b>n</b>e
+            </h1>
+            <p className="mb-5 text-blue-100 font-robert-regular max-w-64">
+              Enter the metagame layer <br />
+              Unleash the play economy
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
