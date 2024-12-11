@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
+import Button from "./Button";
+import { TiLocationArrow } from "react-icons/ti";
 
 export default function Hero() {
   const [currIdx, setCurrIdx] = useState(1);
@@ -50,7 +52,7 @@ export default function Hero() {
         </div>
 
         <video
-          src={getVidSrc(currIdx)}
+          src={getVidSrc(currIdx === totalVid - 1 ? 1 : currIdx)}
           ref={nextVidRef}
           id="next-video"
           loop
@@ -61,14 +63,14 @@ export default function Hero() {
 
         <video
           autoPlay
-          src={getVidSrc(currIdx === totalVid - 1 ? 1 : currIdx)}
+          src={getVidSrc(currIdx)}
           loop
           muted
           className="object-center object-cover absolute left-0 top-0 size-full"
           onLoadedData={handleLoadedVid}
         />
 
-        <h1 className="special-font-b hero-heading absolute bottom-5 right-5 text-blue-75 z-20">
+        <h1 className="special-font-b hero-heading absolute bottom-7 right-5 text-blue-75 z-20">
           G<b>a</b>ming
         </h1>
         <div className="absolute top-0 left-0 z-20 size-full">
@@ -80,9 +82,18 @@ export default function Hero() {
               Enter the metagame layer <br />
               Unleash the play economy
             </p>
+            <Button
+              leftIcon={<TiLocationArrow />}
+              title="Watch Trailor"
+              id="watch-trailor"
+              containerClass="flex-center gap-1 !bg-yellow-300"
+            />
           </div>
         </div>
       </div>
+      <h1 className="special-font-b hero-heading absolute bottom-7 right-5 text-black">
+        G<b>a</b>ming
+      </h1>
     </div>
   );
 }
