@@ -4,8 +4,8 @@ import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/all";
-gsap.registerPlugin(ScrollTrigger)
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const [currIdx, setCurrIdx] = useState(1);
@@ -35,7 +35,30 @@ export default function Hero() {
 (2) import useGSAP from "@gsap/react"
 (3) import gsap from "gsap"
 (4)useGSAP syntax :-  
-(i)useGSAP(()=>{},{dependencies : [currIdx],revertOnUpdate : true}) // 
+(i)useGSAP(()=>{},{dependencies : [currIdx],revertOnUpdate : true}) 
+(5)ScrollTrigger is a plugin of Gsap , it needs to be imported and registered
+import {ScrollTrigger} from "gsap/all"
+gsap.registerPlugin(ScrollTrigger)
+capital s!
+(6) ScrollTrigger synTax in gsap , 
+
+
+gsap.to("#tgtEl",{
+scrollTrigger : {
+trigger : "#tgtEl"  
+scroller : "body/#tgtEl"
+start : "center center"
+end : "bottom center"
+scrub : true
+markers : true
+}
+})
+
+trigger === targetElemnt
+scroller === by default window // but can be put === body // tgtEl
+start === animation will start when center of tgtEl reaches center of viewPoRT
+Scrub === links animation directly to scroll
+markers === for debugging// 
 */
 
   useGSAP(
@@ -48,8 +71,10 @@ export default function Hero() {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         borderRadius: "0 0 0 0",
         ease: "power1.inOut",
+        duration: 1.2,
         scrollTrigger: {
           trigger: "#video-frame",
+          scroller: "body",
           start: "center center",
           end: "bottom center",
           scrub: true,
