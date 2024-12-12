@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function About() {
   useGSAP(() => {
@@ -28,10 +29,16 @@ export default function About() {
         <h1 className="font-general text-sm md:text-[10px] text-black">
           Welcome to Zentry
         </h1>
-        <div className="uppercase text-6xl text-center">
-          Disc<b>o</b>ver The worlds <br />
-          largest shared <b>a</b>dventure
-        </div>
+        <AnimatedTitle
+          title="Disc<b>o</b>ver the worlds <br/> largest shared <b>a</b>dventure"
+          containerClass="mt-5 text-center !text-black"
+        />
+
+        {/* <AnimatedTitle
+          title="Disc<b>o</b>ver The worlds <br />
+          largest shared <b>a</b>dventure"
+          containerClass="mt-5 !text-black text-center"
+        /> */}
         <div className="about-subtext">
           <p>The Game of Games begins—your life, now an epic MMORPG</p>
           <p className="text-gray-500">
@@ -42,7 +49,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="h-dvh w-screen" id="clip">
+      <div className="relative h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
             src="../../public/img/about.webp"
