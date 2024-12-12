@@ -7,7 +7,6 @@
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: #adadca;
   font-family: "General Sans", sans-serif;
 }
 
@@ -73,7 +72,7 @@ body {
   }
 
   .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
+    @apply  absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem] z-[30];
   }
 
   .about-image {
