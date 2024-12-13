@@ -30,7 +30,7 @@ export default function About() {
           Welcome to Zentry
         </h1>
         <AnimatedTitle
-          title="Disc<b>o</b>ver the worlds <br/> largest shared <b>a</b>dventure"
+          title="Disc<b>o</b>ver the worlds <br /> largest shared <b>a</b>dventure"
           containerClass="mt-5 text-center !text-black"
         />
 
