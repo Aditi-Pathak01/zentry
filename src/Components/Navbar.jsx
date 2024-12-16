@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
-import gsap from "gsap"
+import gsap from "gsap";
 
 export default function Navbar() {
   const [audBtnClicked, setAudBtnClicked] = useState(false);
@@ -27,11 +27,11 @@ export default function Navbar() {
 
   useEffect(() => {
     if (currentScrollY === 0) {
-       // at top: show navbar and remove floating-nav
+      // at top: show navbar and remove floating-nav
       setIsNavVisible(true);
       navRef.current.classList.remove("floating-nav");
     } else if (currentScrollY > lastScrollY) {
-       // Scrolling down: hide navbar and apply floating-nav
+      // Scrolling down: hide navbar and apply floating-nav
       setIsNavVisible(false);
       navRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {
@@ -40,7 +40,7 @@ export default function Navbar() {
       navRef.current.classList.add("floating-nav");
     }
     setLastScrollY(currentScrollY);
-  }, [currentScrollY,lastScrollY]);
+  }, [currentScrollY, lastScrollY]);
 
   useEffect(() => {
     gsap.to(navRef.current, {

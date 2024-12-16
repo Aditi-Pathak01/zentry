@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 /*
  * Mapping is used! .split(" ") is used!(converts strings ==> array otb of " " ie space)
- * dangerouslySetInnerHTML={{ __html: word }} ==> removes html tags from the strings // <b></b> etc
+ * dangerouslySetInnerHTML={{ __html: word }} ==> removes html tags from the strings and adds text(word)// <b></b> etc
  * container ref is used  ==> targetEl(ref.current) , div and as gsap context dependency
  * useEffect is used and its effeciency is increased by =>  return ()=> fx.revert() [VIP]
  * gsap.context(()=>{gsapcode can be written here!},dependencies) =>timeline and gsap.to/from/set
