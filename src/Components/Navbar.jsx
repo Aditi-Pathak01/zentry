@@ -55,7 +55,7 @@ export default function Navbar() {
         <nav className="flex items-center size-full justify-between p-4">
           <div className="flex items-center gap-5">
             <img
-              src="../../public/img/logo.png"
+              src="img/logo.png"
               alt="Logo"
               className="w-10 object-cover"
             />
