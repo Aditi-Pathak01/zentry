@@ -32,7 +32,9 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col items-center gap-2 pt-10 text-center">
-          <p className="text-[10px] uppercase mb-10 font-general text-blue-50">Join zentry</p>
+          <p className="text-[10px] uppercase mb-10 font-general text-blue-50">
+            Join zentry
+          </p>
           <AnimatedTitle
             title="let&#39;s b<b>u</b>ild the <br /> new era of <br /> g<b>a</b>ming t<b>o</b>gether."
             containerClass="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
