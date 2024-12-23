@@ -7,7 +7,7 @@ const Bentotilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
 
   const handleMouseMove = (e) => {
-    if(!ref.current) return ;
+    if (!ref.current) return;
     const { left, top, height, width } = ref.current.getBoundingClientRect();
     const x = (e.clientX - left) / width;
     const y = (e.clientY - top) / height;
@@ -52,7 +52,7 @@ const Bentocard = ({ src, title, description }) => {
         </div>
         <div className="relative z-10 text-blue-50 flex flex-col justify-between p-5 size-full">
           <div>
-            <h1 className="bentotitle special-font">{title}</h1>
+            <h1 className="bento-title special-font">{title}</h1>
             {description && (
               <p className="mt-3 max-w-64 text-xs md:text-base">
                 {description}
@@ -82,7 +82,7 @@ export default function Features() {
 
         <div className="relative border-hsla h-96 w-full rounded-md overflow-hidden mt-5 mb-10">
           <Bentocard
-            src="../../public/videos/feature-1.mp4"
+            src="videos/feature-1.mp4"
             title={
               <>
                 Radia<b>n</b>t
@@ -95,7 +95,7 @@ export default function Features() {
         <div className="h-[135vh] w-full grid grid-cols-2 grid-rows-3 gap-7">
           <Bentotilt className="bento-tilt_1 row-span-1  md:col-span-1 md:row-span-2">
             <Bentocard
-              src="../../public/videos/feature-2.mp4"
+              src="videos/feature-2.mp4"
               title={
                 <>
                   zig<b>m</b>a
@@ -107,7 +107,7 @@ export default function Features() {
 
           <Bentotilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
             <Bentocard
-              src="../../public/videos/feature-3.mp4"
+              src="videos/feature-3.mp4"
               title={
                 <>
                   n<b>e</b>xus
@@ -119,7 +119,7 @@ export default function Features() {
 
           <Bentotilt className="bento-tilt_1 row-span-1 me-8 md:col-span-1 md:me-0">
             <Bentocard
-              src="../../public/videos/feature-4.mp4"
+              src="public/videos/feature-4.mp4"
               title={
                 <>
                   az<b>u</b>l
@@ -140,12 +140,7 @@ export default function Features() {
           </Bentotilt>
 
           <Bentotilt className="bento-tilt_2">
-            <video
-              src="../../public/videos/feature-5.mp4"
-              loop
-              autoPlay
-              muted
-            />
+            <video src="videos/feature-5.mp4" loop autoPlay muted />
           </Bentotilt>
         </div>
       </div>

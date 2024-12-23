@@ -35,8 +35,8 @@ export default function Story() {
     });
   };
   return (
-    <section className="h-min-dvh w-screen bg-black text-blue-50 border border-red-500">
-      <div className="flex size-full flex-col items-center py-10 pb-24  border-red-800">
+    <section className="h-min-dvh w-screen bg-black text-blue-50">
+      <div className="flex size-full flex-col items-center py-10 pb-24">
         <p className="font-general text-sm uppercase md:text-[10px]">
           The multiverse IP world
         </p>
@@ -52,7 +52,7 @@ export default function Story() {
             <div className="story-img-content">
               <img
                 ref={frameRef}
-                src="../../public/img/entrance.webp"
+                src="img/entrance.webp"
                 className="object-contain"
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseLeave}

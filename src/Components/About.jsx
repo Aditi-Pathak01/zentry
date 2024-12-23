@@ -52,7 +52,7 @@ export default function About() {
       <div className="relative h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="../../public/img/about.webp"
+            src="img/about.webp"
             className="absolute left-0 top-0 object-cover size-full"
           />
         </div>

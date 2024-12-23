@@ -19,7 +19,7 @@ export default function Hero() {
     setHasClicked(true);
     setCurrIdx((prev) => (prev % totalVid) + 1);
   };
-  const getVidSrc = (idx) => `../../public/videos/hero-${idx}.mp4`;
+  const getVidSrc = (idx) => `videos/hero-${idx}.mp4`;
   useEffect(() => {
     if (loadedVid === totalVid - 1) {
       setLoading(false);

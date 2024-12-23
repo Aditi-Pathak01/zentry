@@ -15,18 +15,18 @@ export default function Contact() {
       <div className="relative w-full bg-black rounded-lg py-24 sm:overflow-hidden">
         <div className="absolute -left-20 top-0 h-full w-72 overflow-hidden hidden sm:block lg:left-20 lg:w-96">
           <ImgBox
-            src="../../public/img/contact-1.webp"
+            src="img/contact-1.webp"
             containerclass="contact-clip-path-1"
           />
           <ImgBox
-            src="../../public/img/contact-2.webp"
+            src="img/contact-2.webp"
             containerclass="contact-clip-path-2 lg:translate-y-40 translate-y-60"
           />
         </div>
 
         <div className="absolute -top-40 left-20 w-60 md:left-auto md:right-10 lg:top-20 lg:w-80 sm:top-1/2">
           <ImgBox
-            src="../../public/img/swordman.webp"
+            src="img/swordman.webp"
             containerclass="sword-man-clip-path md:scale-125"
           />
         </div>
